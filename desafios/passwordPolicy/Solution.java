@@ -1,6 +1,12 @@
 class Solution{
     public static void main(String args[]){
-        String senha = args.length > 0 ? args[0] : "";
+
+        if(args.length == 0){
+            System.out.println("Informe uma senha");
+            return;
+        }
+        
+        String senha = args[0];
 
         boolean deveTerNoMinimoOitoCaracteres = senha.length() >= 8;
         boolean deveConterPeloMenosUmNumero = contemPeloMenosUmNumero(senha);
@@ -18,9 +24,7 @@ class Solution{
     }
 
     static boolean contemPeloMenosUmNumero(String senha){
-        boolean contemPeloMenosUmNumero = (senha.contains("1") || senha.contains("2") || senha.contains("3") || senha.contains("4") || senha.contains("5") || senha.contains("6") || senha.contains("7") || senha.contains("8") || senha.contains("9") || senha.contains("0"));
-        
-        return contemPeloMenosUmNumero;
+        return (senha.contains("1") || senha.contains("2") || senha.contains("3") || senha.contains("4") || senha.contains("5") || senha.contains("6") || senha.contains("7") || senha.contains("8") || senha.contains("9") || senha.contains("0"));
     } 
 
     static boolean contemPeloMenosUmaLetraMaiuscula(String senha){
