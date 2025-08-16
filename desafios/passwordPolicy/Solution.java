@@ -13,8 +13,9 @@ class Solution{
         boolean deveConterPeloMenosUmaLetraMaiuscula = contemPeloMenosUmaLetraMaiuscula(senha);
         boolean deveConterPeloMenosUmaLetraMinuscula = contemPeloMenosUmaLetraMinuscula(senha);
         boolean deveConterPeloMenosUmCaractereEspecial = contemPeloMenosUmCaractereEspecial(senha);
+        boolean naoContemSequenciasFracas = naoContemTresNumerosConsecutivos(senha);
 
-        boolean senhaValida = deveTerNoMinimoOitoCaracteres && deveConterPeloMenosUmaLetraMaiuscula && deveConterPeloMenosUmNumero && deveConterPeloMenosUmaLetraMinuscula && deveConterPeloMenosUmCaractereEspecial;
+        boolean senhaValida = deveTerNoMinimoOitoCaracteres && deveConterPeloMenosUmaLetraMaiuscula && deveConterPeloMenosUmNumero && deveConterPeloMenosUmaLetraMinuscula && deveConterPeloMenosUmCaractereEspecial && naoContemSequenciasFracas;
 
         if(senhaValida){
             System.out.println("Senha válida");
@@ -42,6 +43,29 @@ class Solution{
     static boolean contemPeloMenosUmCaractereEspecial(String senha){
         boolean result = (senha.contains("!") || senha.contains("@") || senha.contains("#") || senha.contains("$") || senha.contains("%") || senha.contains("^") || senha.contains("&") || senha.contains("*") || senha.contains("(") || senha.contains(")") || senha.contains("-") || senha.contains("+") || senha.contains("="));
         
+        return result;
+    }
+
+    static boolean naoContemTresNumerosConsecutivos(String senha){
+        char[] charsSenha = senha.toCharArray();
+        boolean result = true;
+        for (int i = 0; i < (charsSenha.length - 2); i++) {
+            if (Character.isDigit(charsSenha[i])) {
+                int primeiroNumero = Character.getNumericValue(charsSenha[i]);
+                if (Character.isDigit(charsSenha[i+1])) {
+                    int segundoNumero = Character.getNumericValue(charsSenha[i+1]);
+                    if (segundoNumero == primeiroNumero+1 || segundoNumero == primeiroNumero-1) {
+                        if (Character.isDigit(charsSenha[i+2])) {
+                            int terceiroNumero = Character.getNumericValue(charsSenha[i+2]);
+                            if ((terceiroNumero == primeiroNumero+2 && terceiroNumero == segundoNumero+1) || (terceiroNumero == primeiroNumero-2 && terceiroNumero == segundoNumero-1)) {
+                               result = false;
+                               return result;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         return result;
     }
 
