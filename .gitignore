@@ -67,3 +67,5 @@ nbdist/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+chaves_pix_data/
