@@ -10,7 +10,6 @@ class LocalFileStorePasswordManager implements PasswordManager{
         this.passwordGenerator = passwordGenerator;
     }
 
-
     @Override
     public Map<String, String> search(String key) {
         String fileContent = FileUtil.readFile(filePath);

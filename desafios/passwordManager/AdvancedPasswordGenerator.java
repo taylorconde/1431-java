@@ -4,7 +4,6 @@ class AdvancedPasswordGenerator implements PasswordGenerator{
     
     private static int PASSWORD_LENGTH = 32;
     private static String CHARS = "}{|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
-
     
     @Override
     public String generateRandomPassword() {
