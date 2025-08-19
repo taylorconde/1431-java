@@ -1,4 +1,4 @@
-# 💳 Validador e Cadastrador de Chaves PIX
+# 💳 Validador de Chaves PIX
 
 Este projeto é um programa de linha de comando em Java para validar chaves PIX. O sistema verifica se uma chave PIX (CPF, CNPJ, e-mail ou telefone celular) é válida de acordo com seu tipo e formatação.
 
@@ -13,7 +13,7 @@ Este projeto é um programa de linha de comando em Java para validar chaves PIX.
 Para compilar o projeto, navegue até o diretório e execute o seguinte comando:
 
 ```bash
-javac *.java -d ./out
+javac ./src/**/*.java -d out
 ```
 
 ## Como Executar
@@ -22,12 +22,12 @@ Após a compilação, você pode executar o programa passando os argumentos nece
 
 **Para apenas validar uma chave:**
 ```bash
-java -cp ./out Main <tipo_da_chave> <valor_da_chave>
+java -cp ./out br.com.ada.t1431.desafios.pix.Main <tipo_da_chave> <valor_da_chave>
 ```
 
 **Para validar e salvar uma chave (funcionalidade extra):**
 ```bash
-java -cp ./out Main <codigo_instituicao> <tipo_da_chave> <valor_da_chave>
+java -cp ./out br.com.ada.t1431.desafios.pix.Main <codigo_instituicao> <tipo_da_chave> <valor_da_chave>
 ```
 
 Substitua os parâmetros pelos valores desejados. Os tipos de chave podem ser: `CPF`, `CNPJ`, `EMAIL`, `CELULAR`.
@@ -36,7 +36,7 @@ Substitua os parâmetros pelos valores desejados. Os tipos de chave podem ser: `
 
 **1. Validando um CPF (válido):**
 ```bash
-java -cp ./out Main CPF 12345678901
+java -cp ./out br.com.ada.t1431.desafios.pix.Main CPF 12345678901
 ```
 **Saída esperada:**
 ```
@@ -45,7 +45,7 @@ Chave PIX válida!
 
 **2. Cadastrando uma nova chave (funcionalidade extra):**
 ```bash
-java -cp ./out Main 001 EMAIL usuario@exemplo.com
+java -cp ./out br.com.ada.t1431.desafios.pix.Main 001 EMAIL usuario@exemplo.com
 ```
 **Saída esperada:**
 ```
