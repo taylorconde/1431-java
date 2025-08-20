@@ -7,8 +7,8 @@ import br.com.ada.t1431.desafios.pix.extra.service.GerenciadorChavesPix;
 import br.com.ada.t1431.desafios.pix.extra.service.impl.GerenciadorChavesPixEmArquivo;
 import br.com.ada.t1431.desafios.pix.model.exception.ChavePixFormatoInvalidoException;
 import br.com.ada.t1431.desafios.pix.model.exception.ChavePixException;
-import br.com.ada.t1431.desafios.pix.extra2.service.GeradorChaveAleatoria;
-import br.com.ada.t1431.desafios.pix.extra2.service.impl.GeradorChaveAleatoriaDefaultImpl;
+import br.com.ada.t1431.desafios.pix.extra2.model.GeradorChaveAleatoria;
+import br.com.ada.t1431.desafios.pix.extra2.model.impl.GeradorChaveAleatoriaDefaultImpl;
 import br.com.ada.t1431.desafios.pix.extra2.model.ChavePixComDadosBancariosFactory;
 
 import java.util.HashMap;

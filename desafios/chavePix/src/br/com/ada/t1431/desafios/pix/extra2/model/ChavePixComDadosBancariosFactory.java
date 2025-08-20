@@ -1,6 +1,6 @@
 package br.com.ada.t1431.desafios.pix.extra2.model;
 
-import br.com.ada.t1431.desafios.pix.extra2.service.GeradorChaveAleatoria;
+import br.com.ada.t1431.desafios.pix.extra2.model.GeradorChaveAleatoria;
 import br.com.ada.t1431.desafios.pix.model.TipoChave;
 import br.com.ada.t1431.desafios.pix.extra.model.ChavePixComDadosBancarios;
 

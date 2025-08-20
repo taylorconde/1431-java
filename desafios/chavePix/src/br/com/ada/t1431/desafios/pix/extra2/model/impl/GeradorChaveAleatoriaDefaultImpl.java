@@ -1,6 +1,6 @@
-package br.com.ada.t1431.desafios.pix.extra2.service.impl;
+package br.com.ada.t1431.desafios.pix.extra2.model.impl;
 
-import br.com.ada.t1431.desafios.pix.extra2.service.GeradorChaveAleatoria;
+import br.com.ada.t1431.desafios.pix.extra2.model.GeradorChaveAleatoria;
 
 /**
  * Implementação padrão da interface {@link GeradorChaveAleatoria}.
