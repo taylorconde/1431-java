@@ -5,7 +5,7 @@ import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorCNPJ;
 import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorCPF;
 import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorCelular;
 import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorEmail;
-import br.com.ada.t1431.desafios.pix.extra2.validador.ValidadorChaveAleatoria;
+import br.com.ada.t1431.desafios.pix.extra2.model.validador.ValidadorChaveAleatoria;
 
 /**
  * Fábrica responsável por fornecer a instância correta do validador
