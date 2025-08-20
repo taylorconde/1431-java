@@ -1,13 +1,13 @@
 # 💳 Gerenciador de Chaves PIX
 
-Este projeto é um programa de linha de comando em Java para validar, cadastrar, buscar e remover chaves PIX. O sistema utiliza um arquivo local para persistir os dados.
+Este projeto é um programa de linha de comando (CLI) em Java para validar, cadastrar, buscar e remover chaves PIX. O sistema utiliza um arquivo local para persistir os dados.
 
 ## Funcionalidades Principais
 
 - **Cadastro de Chaves:** Permite associar uma chave PIX a dados bancários (instituição, agência, conta).
 - **Validação Completa:** Valida o formato e os dígitos verificadores para chaves CPF e CNPJ.
 - **Busca e Remoção:** Permite consultar e remover chaves existentes.
-- **Tipos Suportados:** CPF, CNPJ, E-mail e Telefone Celular.
+- **Tipos Suportados:** `CPF`, `CNPJ`, `EMAIL`, `CELULAR`, `ALEATORIA`.
 - **Persistência em Arquivo:** Salva os dados em um diretório local (`chaves_pix_data`).
 
 ## Como Compilar
@@ -15,7 +15,7 @@ Este projeto é um programa de linha de comando em Java para validar, cadastrar,
 Para compilar o projeto, navegue até o diretório e execute o seguinte comando:
 
 ```bash
-javac -d out $(find src -name "*.java") -Xlint:unchecked
+javac -d out $(find src -name "*.java")
 ```
 
 ## Como Executar
