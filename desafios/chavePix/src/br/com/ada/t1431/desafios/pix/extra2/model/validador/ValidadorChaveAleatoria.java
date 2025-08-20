@@ -1,7 +1,7 @@
 package br.com.ada.t1431.desafios.pix.extra2.model.validador;
 
 import br.com.ada.t1431.desafios.pix.model.exception.ChavePixFormatoInvalidoException;
-import br.com.ada.t1431.desafios.pix.validador.ValidadorChavePix;
+import br.com.ada.t1431.desafios.pix.model.validador.ValidadorChavePix;
 
 /**
  * Implementação de {@link ValidadorChavePix} para chaves do tipo Aleatória.

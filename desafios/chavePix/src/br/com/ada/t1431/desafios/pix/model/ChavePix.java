@@ -1,8 +1,8 @@
 package br.com.ada.t1431.desafios.pix.model;
 
 import br.com.ada.t1431.desafios.pix.model.exception.ChavePixFormatoInvalidoException;
-import br.com.ada.t1431.desafios.pix.validador.ValidadorChavePix;
-import br.com.ada.t1431.desafios.pix.validador.ValidadorChavePixFactory;
+import br.com.ada.t1431.desafios.pix.model.validador.ValidadorChavePix;
+import br.com.ada.t1431.desafios.pix.model.validador.ValidadorChavePixFactory;
 
 import java.util.Objects;
 

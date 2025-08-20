@@ -1,4 +1,4 @@
-package br.com.ada.t1431.desafios.pix.validador;
+package br.com.ada.t1431.desafios.pix.model.validador;
 
 import br.com.ada.t1431.desafios.pix.model.exception.ChavePixFormatoInvalidoException;
 

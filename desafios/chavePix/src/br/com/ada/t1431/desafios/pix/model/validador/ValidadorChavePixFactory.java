@@ -1,10 +1,10 @@
-package br.com.ada.t1431.desafios.pix.validador;
+package br.com.ada.t1431.desafios.pix.model.validador;
 
 import br.com.ada.t1431.desafios.pix.model.TipoChave;
-import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorCNPJ;
-import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorCPF;
-import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorCelular;
-import br.com.ada.t1431.desafios.pix.validador.impl.ValidadorEmail;
+import br.com.ada.t1431.desafios.pix.model.validador.impl.ValidadorCNPJ;
+import br.com.ada.t1431.desafios.pix.model.validador.impl.ValidadorCPF;
+import br.com.ada.t1431.desafios.pix.model.validador.impl.ValidadorCelular;
+import br.com.ada.t1431.desafios.pix.model.validador.impl.ValidadorEmail;
 import br.com.ada.t1431.desafios.pix.extra2.model.validador.ValidadorChaveAleatoria;
 
 /**

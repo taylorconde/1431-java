@@ -1,7 +1,7 @@
-package br.com.ada.t1431.desafios.pix.validador.impl;
+package br.com.ada.t1431.desafios.pix.model.validador.impl;
 
 import br.com.ada.t1431.desafios.pix.model.exception.ChavePixFormatoInvalidoException;
-import br.com.ada.t1431.desafios.pix.validador.ValidadorChavePix;
+import br.com.ada.t1431.desafios.pix.model.validador.ValidadorChavePix;
 
 /**
  * Implementação de ValidadorChavePix para chaves do tipo CPF.
