@@ -50,8 +50,8 @@ Esta é a implementação mais básica, focada exclusivamente na **validação**
   ```
 - **Exemplo:**
   ```bash
-  # Validando um CPF com formato correto
-  java -cp ./out br.com.ada.t1431.desafios.pix.Main CPF 12345678901
+  # Validando um email com formato correto
+  java -cp ./out br.com.ada.t1431.desafios.pix.Main email usuario@test.com
   ```
   **Saída:** `Chave Pix válida.`
 
@@ -110,11 +110,11 @@ Esta é a versão mais avançada, que adiciona a capacidade de **gerar chaves al
   - **Descrição:** Para cadastrar uma chave aleatória, basta omitir o parâmetro `-v` (valor) e definir o tipo (`-t`) como `ALEATORIA`. O sistema irá gerar um UUID como valor da chave.
   - **Comando:**
     ```bash
-    java -cp ./out br.com.ada.t1431.desafios.pix.extra2.Main cadastrar -i <instituicao> -a <agencia> -c <conta> -t ALEATORIA
+    java -cp ./out br.com.ada.t1431.desafios.pix.extra2.Main cadastrar -i <instituicao> -a <agencia> -c <conta> -t aleatoria
     ```
   - **Exemplo:**
     ```bash
-    java -cp ./out br.com.ada.t1431.desafios.pix.extra2.Main cadastrar -i 260 -a 0001 -c 12345-6 -t ALEATORIA
+    java -cp ./out br.com.ada.t1431.desafios.pix.extra2.Main cadastrar -i 260 -a 0001 -c 12345-6 -t aleatoria
     ```
     **Saída:** `Chave PIX 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' cadastrada com sucesso.` (Onde 'x' representa o UUID gerado).
 
