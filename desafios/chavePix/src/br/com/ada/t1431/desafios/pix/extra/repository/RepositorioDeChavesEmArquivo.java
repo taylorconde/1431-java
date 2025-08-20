@@ -1,4 +1,4 @@
-package br.com.ada.t1431.desafios.pix.extra.service.impl;
+package br.com.ada.t1431.desafios.pix.extra.respository;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class RepositorioDeChavesEmArquivo {
+public class RepositorioDeChavesEmArquivo {
     private static final String NOME_ARQUIVO = ".chaves";
     private final Path arquivoChaves;
 
-    RepositorioDeChavesEmArquivo(String diretorio) {
+    public RepositorioDeChavesEmArquivo(String diretorio) {
         Path pathDiretorio = Paths.get(diretorio);
         try {
             Files.createDirectories(pathDiretorio);
@@ -23,7 +23,7 @@ class RepositorioDeChavesEmArquivo {
         this.arquivoChaves = pathDiretorio.resolve(NOME_ARQUIVO);
     }
 
-    List<String> lerLinhas() {
+    public List<String> lerLinhas() {
         if (!Files.exists(arquivoChaves)) {
             return new ArrayList<>();
         }
@@ -34,7 +34,7 @@ class RepositorioDeChavesEmArquivo {
         }
     }
 
-    void escreverLinhas(List<String> linhas) {
+    public void escreverLinhas(List<String> linhas) {
         try {
             Files.write(arquivoChaves, linhas);
         } catch (IOException e) {
