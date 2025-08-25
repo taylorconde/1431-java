@@ -1,8 +1,7 @@
-package model.chavePix;
+package br.ada.t1431.pix.domain.chavePix;
 
-import model.dadosBancarios.DadosBancarios;
-import model.exception.ChavePixInvalidaException;
-import model.validador.Validador;
+import br.ada.t1431.pix.domain.chavePix.dadosBancarios.DadosBancarios;
+import br.ada.t1431.pix.domain.chavePix.validador.Validador;
 
 // 4 principios da POO
 // Abstração, Encapsulamento, Herança, Polimorfismo

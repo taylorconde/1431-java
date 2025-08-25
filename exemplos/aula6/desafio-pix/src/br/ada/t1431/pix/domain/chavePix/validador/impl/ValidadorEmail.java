@@ -1,7 +1,6 @@
-package model.validador.impl;
-
+package br.ada.t1431.pix.domain.chavePix.validador.impl;
+import br.ada.t1431.pix.domain.chavePix.validador.Validador;
 import model.exception.ChavePixInvalidaException;
-import model.validador.Validador;
 
 public class ValidadorEmail implements Validador {
     @Override

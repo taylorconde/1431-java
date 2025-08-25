@@ -1,4 +1,4 @@
-package model.exception;
+package br.ada.t1431.pix.domain.chavePix.exception;
 
 public class ChavePixInvalidaException extends RuntimeException {
 

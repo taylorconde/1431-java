@@ -1,4 +1,4 @@
-package model.validador;
+package br.ada.t1431.pix.domain.chavePix.validador;
 
 import model.exception.ChavePixInvalidaException;
 
