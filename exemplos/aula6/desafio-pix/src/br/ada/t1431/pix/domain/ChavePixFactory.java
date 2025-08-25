@@ -1,9 +1,9 @@
-package br.ada.t1431.pix.domain.chavePix;
+package br.ada.t1431.pix.domain;
 
 
-import br.ada.t1431.pix.domain.chavePix.dadosBancarios.DadosBancarios;
-import br.ada.t1431.pix.domain.chavePix.validador.Validador;
-import br.ada.t1431.pix.domain.chavePix.validador.impl.*;
+import br.ada.t1431.pix.domain.dadosBancarios.DadosBancarios;
+import br.ada.t1431.pix.domain.validador.Validador;
+import br.ada.t1431.pix.domain.validador.impl.*;
 
 public class ChavePixFactory {
 

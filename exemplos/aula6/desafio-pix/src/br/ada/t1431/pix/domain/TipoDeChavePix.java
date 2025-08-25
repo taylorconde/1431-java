@@ -1,4 +1,4 @@
-package br.ada.t1431.pix.domain.chavePix;
+package br.ada.t1431.pix.domain;
 
 public enum TipoDeChavePix {
 

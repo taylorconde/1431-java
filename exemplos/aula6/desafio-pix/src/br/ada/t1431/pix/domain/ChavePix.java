@@ -1,7 +1,7 @@
-package br.ada.t1431.pix.domain.chavePix;
+package br.ada.t1431.pix.domain;
 
-import br.ada.t1431.pix.domain.chavePix.dadosBancarios.DadosBancarios;
-import br.ada.t1431.pix.domain.chavePix.validador.Validador;
+import br.ada.t1431.pix.domain.dadosBancarios.DadosBancarios;
+import br.ada.t1431.pix.domain.validador.Validador;
 
 // 4 principios da POO
 // Abstração, Encapsulamento, Herança, Polimorfismo
@@ -17,9 +17,10 @@ public class ChavePix {
         this.valor = valor;
         this.dadosBancarios = dadosBancarios;
         this.validador = validador;
+        validar();
     }
 
-    void validar(){
+    private void validar(){
         validador.validar(this.valor);
     }
 
