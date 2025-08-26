@@ -15,39 +15,63 @@ public class AppCLIController {
     }
 
     public void processar(String[] parametros) {
-        for (int i = 0; i < parametros.length - 1; i++) {
-            mapaDeParametros.put(parametros[i].replace("-", ""), parametros[i + 1]);
+        if (parametros.length == 0) {
+            System.out.println("Nenhum comando informado. Use -cmd cadastrar|listar|remover");
+            return;
+        }
+
+        // Monta mapa de parâmetros: -x valor
+        for (int i = 0; i < parametros.length - 1; i += 2) {
+            String chave = parametros[i].replace("-", "");
+            String valor = parametros[i + 1];
+            mapaDeParametros.put(chave, valor);
         }
 
         String comando = mapaDeParametros.get("cmd");
 
-        if (comando.equals("salvar")) {
+        if (comando == null) {
+            System.out.println("Informe o comando com -cmd (cadastrar, listar, remover)");
+            return;
+        }
+
+        switch (comando.toLowerCase()) {
+            case "cadastrar":
+                cadastrar();
+                break;
+            case "listar":
+                listar();
+                break;
+            case "remover":
+                remover();
+                break;
+            default:
+                System.out.println("Comando inválido: " + comando);
+        }
+    }
+
+    private void cadastrar() {
+        try {
             String instituicao = mapaDeParametros.get("i");
             String agencia = mapaDeParametros.get("a");
             String numeroDaConta = mapaDeParametros.get("cn");
             String tipoDaConta = mapaDeParametros.get("ct");
             String tipoDaChave = mapaDeParametros.get("t");
             String valorDaChave = mapaDeParametros.get("v");
-            try {
-                gerenciarChavePix.salvar(valorDaChave, tipoDaChave, instituicao, agencia, numeroDaConta, tipoDaConta);
-                System.out.println("Chave cadastrada com sucesso!");
-            } catch (Exception e) {
-                System.out.println("Erro ao salvar a chave." + e.getMessage());
-            }
-        }
 
+            gerenciarChavePix.salvar(valorDaChave, tipoDaChave, instituicao, agencia, numeroDaConta, tipoDaConta);
+            System.out.println(" Chave cadastrada com sucesso!");
+        } catch (Exception e) {
+            System.out.println(" Erro ao salvar a chave: " + e.getMessage());
+        }
     }
 
-    // -i: instituicao
-    // -cn: numero da conta
-    // -a: agencia
-    // -ct: tipo de conta
-    // -t: tipo da chave
-    // -v: valor da chave
-    // -cmd comando
+    private void listar() {
+        System.out.println("📋 Listando chaves (em breve: chamar service.listar())");
+        // TODO: implementar usando gerenciarChavePix.listar()
+    }
 
-    // java Main -a asaas -b sadsds -c dfddfd -d sdsdsfs
-
-    // Main (entrada dos parametros) -> Controller -> Service -> Usar o dominio (modelo) e orquestar (se necessario) com o Repository -> Repository
-
+    private void remover() {
+        System.out.println("🗑️ Removendo chave (em breve: chamar service.remover())");
+        // TODO: implementar usando gerenciarChavePix.remover()
+    }
 }
